@@ -100,6 +100,29 @@ batch size 1, DFlash2 K=5, 512-MiB host recurrent-cache cap
 A second profile, `config/config.yml`, is the original 8,192-token FP16-KV
 K=5 comparison profile used for the matched AR-vs-K5 throughput table.
 
+## Container image (click-run)
+
+The qualification image is published — **ARM64/SM121 only** (aarch64 host
+required; there is no x86-64 build):
+
+```bash
+docker pull ghcr.io/r0b0tlab/glm53-flash-exl3-exllamav3-gb10:b25c467
+# :latest tracks the same build
+```
+
+- Registry digest: `sha256:e321670c0964d2613fb52aa33b84bd7783724eda315e1c6502480d9638e88c02`
+- Image config ID: `sha256:1eccd2c0b7888a4a1f049ebc6953649ed1d931f4fbdb2aef0c8e98a3ca92f08b`
+  (matches the local build byte-for-byte; the tag name is the source SHA)
+- Built from this repository at commit `b25c467` by `scripts/build_image.sh`
+  (revision label `org.opencontainers.image.revision=b25c4672f…`, non-root
+  `runner` user). Contains **no model weights** — mount the HF packs from the
+  links above. Model paths are bind-mounted read-only at
+  `/models/target` and `/models/draft` by `scripts/serve.sh`.
+
+If you prefer to build it yourself: `bash scripts/build_image.sh` from a clean
+checkout of the same commit reproduces the image (native compile; needs
+an aarch64 CUDA 13 host).
+
 ## Layout
 
 - `docker/` — native ARM64 CUDA 13 image (ExLlamaV3 v1.5.2, TabbyAPI, torch 2.13.0+cu130)
