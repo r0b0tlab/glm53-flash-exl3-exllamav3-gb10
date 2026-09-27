@@ -1,0 +1,40 @@
+network:
+  host: 0.0.0.0
+  port: 5000
+  disable_auth: true
+  allowed_origins: []
+  disable_fetch_requests: true
+  api_servers: [OAI]
+logging:
+  log_prompt: false
+  log_requests: false
+  log_chat_completion_requests: false
+model:
+  model_dir: /models
+  model_name: target
+  backend: exllamav3
+  max_seq_len: 8192
+  cache_size: 8192
+  cache_mode: FP16
+  tensor_parallel: false
+  cpu_moe_offload_layers: 0
+  chunk_size: 1024
+  max_batch_size: 1
+  vision: true
+  warmup: true
+  template_vars_default: {reasoning_effort: low}
+  reasoning: true
+  tool_format: glm4_7
+draft_model:
+  draft_mode: model
+  draft_model_dir: /models
+  draft_model_name: draft
+  draft_cache_mode: FP16
+  draft_num_tokens: 5
+  dynamic_draft: false
+sampling:
+  override_preset:
+memory:
+  sysmem_recurrent_cache: 1024
+  sysmem_kv_cache: 0
+  sysmem_multimodal_cache: 512

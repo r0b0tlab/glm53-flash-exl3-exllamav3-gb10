@@ -1,0 +1,10 @@
+{
+  "guard_floor_mib": 6144,
+  "sample_interval_s": 2,
+  "lease_seconds": 86400,
+  "request_wall_s": 402.0,
+  "request_min_available_mib": 6945,
+  "request_margin_mib": 801,
+  "epoch_min_available_mib": 6945,
+  "nvrm_oom_events_during_request": 0
+}

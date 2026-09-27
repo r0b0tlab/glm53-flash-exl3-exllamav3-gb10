@@ -1,0 +1,7 @@
+.hermes/
+evidence/serve*
+evidence/build*
+.venv/
+__pycache__/
+*.pyc
+*.env

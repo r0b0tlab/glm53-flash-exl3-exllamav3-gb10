@@ -1,0 +1,20 @@
+{
+  "source": "matched 8K C1 five-repeat medians, AR vs DFlash2 K=5, this runtime, 2026-09-27",
+  "structured": {
+    "ar_tok_s": 22.91,
+    "k5_tok_s": 52.9
+  },
+  "code": {
+    "ar_tok_s": 22.61,
+    "k5_tok_s": 49.96
+  },
+  "prose": {
+    "ar_tok_s": 22.54,
+    "k5_tok_s": 20.56,
+    "note": "prose regressed under K=5; not a blanket speedup"
+  },
+  "k5_counters": {
+    "accepted": 4832,
+    "rejected": 3673
+  }
+}

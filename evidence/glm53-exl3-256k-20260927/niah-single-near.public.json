@@ -1,0 +1,20 @@
+{
+  "case": "single_near",
+  "window": 262144,
+  "prompt_tokens": 259993,
+  "api_prompt_tokens": 259993,
+  "parity_exact": true,
+  "prompt_sha256": "0ff326610435ca92b72864142bf6cfe66541d55c328b245db9d15357333aa852",
+  "completion_tokens": 28,
+  "finish": "stop",
+  "retrieved": true,
+  "clean_completion": true,
+  "output_reserve_tokens": 2048,
+  "window_remaining_tokens": 103,
+  "bos_proof": {
+    "inserted_bos_id": 1,
+    "local_count": 23,
+    "server_count": 24,
+    "status": "PASS"
+  }
+}

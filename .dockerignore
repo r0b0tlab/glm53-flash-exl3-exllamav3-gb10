@@ -1,0 +1,10 @@
+.git/
+.hermes/
+evidence/
+.venv/
+__pycache__/
+*.pyc
+*.env
+api_tokens.yml
+*.safetensors
+config.local.yml
