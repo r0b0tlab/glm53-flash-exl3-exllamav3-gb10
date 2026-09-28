@@ -1,0 +1,41 @@
+{
+ "score": {
+  "accuracy": 0.3,
+  "correct_count": 6,
+  "failure_rows": 14,
+  "incorrect_count": 14,
+  "score_sha256": "ffd80d5b0c02235a219ed4fa2891c0f1ac90f1e74f46f8ae06a8bc45741fe0dc",
+  "total_count": 20
+ },
+ "identity": {
+  "bfcl_eval_version": "2025.12.17",
+  "candidate_id": "glm53-flash-exl3-2.25hq-tapK3-dflash2k5",
+  "category": "multi_turn_base",
+  "chat_template_kwargs": {
+   "enable_thinking": true,
+   "reasoning_effort": "low",
+   "thinking": true
+  },
+  "dataset_sha256": "1a21a995d06fd6f20ba55de7bced30ef953ec35e998f502ec2ecf4d66ef1c43a",
+  "ground_truth_sha256": "1fee67823b317571649177dd89d63969feaae4e810cc7448ee55ba797fb7c8fc",
+  "image_id": "sha256:1eccd2c0b7888a4a1f049ebc6953649ed1d931f4fbdb2aef0c8e98a3ca92f08b",
+  "label": "BFCL v4 multi_turn_base structural-hard20",
+  "manifest_sha256": "0860da504a3db2c3cd73647ecdc2a5ecdb1793d7a5cf3f4f004912f0ef314d4e",
+  "model": "target",
+  "profile_id": "7df20d795699f0fa7a17a8a49d5878b378f0f5592c07c7ad44a38bde386ec31b",
+  "runtime_binding_sha256": "68e2ac3fdd005247c5707e82607bd71dd6af31bdd98ac4c94afbd16fcfa14e9d",
+  "selected_features_sha256": "65c7889c2f78f29bd71e2d74854a11234a20dbb02e83186ae7a4c9050b79cbca",
+  "selected_ids_sha256": "28158003bca5abf7e6922a8aa460d0bed208b3636757349460000b85812b384f",
+  "selector_policy_sha256": "03999d7f8e22669d5ec51a9920d0e79a6350005f95f7d305e5835e18479dc0f2"
+ },
+ "freshness": {
+  "freshness_sha256": "2dd6485eec1068c6168b6ce63f21f93ce630fd34ce5e64ba990263600e75eb5b",
+  "witness_generation_complete": true
+ },
+ "audit": {
+  "infra_errors": 0,
+  "decode_failure_lines": 116,
+  "decode_note": "normal text-only end-of-turn path (~cases x turns), kit-documented",
+  "failure_types": "state-mismatch / missing-exec-results \u2014 genuine model failures"
+ }
+}

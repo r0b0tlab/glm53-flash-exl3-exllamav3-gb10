@@ -1,0 +1,53 @@
+{
+  "schema": "glm53-exllamav3-q200v2-full-200.v1",
+  "run_id_text180": "glm53-exllamav3-256k-k5-q200v2-20260927T212318Z",
+  "run_id_bfcl": "glm53-exllamav3-256k-k5-bfcl-20260927T232934Z",
+  "model": "GLM-5.3-Flash EXL3 2.25bpw + DFlash2 EXL3 draft K=5",
+  "runtime": "ExLlamaV3 v1.5.2 / TabbyAPI, 256K C1 FP16 profile, image sha256:1eccd2c0...f08b",
+  "concurrency": "serial (workers=1 / threads=1) per user directive",
+  "thinking": "reasoning_effort=low (text lanes); native thinking kwargs required by BFCL kit (enable_thinking+thinking+effort low)",
+  "text_180": {
+    "transported": 180,
+    "errors": 0,
+    "finish_stop": 180,
+    "gsm8k": {
+      "correct": 79,
+      "n": 80,
+      "acc_pct": 98.75
+    },
+    "humaneval": {
+      "correct": 39,
+      "n": 40,
+      "acc_pct": 97.5,
+      "note": "graded in docker sandbox image sha256:dcaafc8d...e9bc (serve image + driver + python3 symlink); 0 grader errors; humaneval-038 MODEL_REJECT"
+    },
+    "ifeval": {
+      "correct": 31,
+      "n": 40,
+      "acc_pct": 77.5
+    },
+    "hard_reasoning": {
+      "correct": 19,
+      "n": 20,
+      "acc_pct": 95.0,
+      "note": "independent manual review; manual-evidence.json bound to run_identity_sha256 91988f3b...c53ee; hard-17 fail (no closed form asserted, requested one-line characterization not delivered)"
+    }
+  },
+  "text_180_total": {
+    "correct": 168,
+    "n": 180,
+    "acc_pct": 93.33
+  },
+  "bfcl_hard20": {
+    "correct": 6,
+    "n": 20,
+    "acc_pct": 30.0,
+    "note": "BFCL v4 multi_turn_base structural-hard20, fresh root, threads=1, bfcl_eval 2025.12.17; 14 incorrect"
+  },
+  "full_200": {
+    "answered": 200,
+    "graded": 200,
+    "correct": 174,
+    "acc_pct": 87.0
+  }
+}

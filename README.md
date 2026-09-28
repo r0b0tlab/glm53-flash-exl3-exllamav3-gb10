@@ -123,6 +123,27 @@ If you prefer to build it yourself: `bash scripts/build_image.sh` from a clean
 checkout of the same commit reproduces the image (native compile; needs
 an aarch64 CUDA 13 host).
 
+## Q200v2 quality kit (2026-09-27, same profile, serial, effort=low)
+
+Full 200-row Q200v2 kit (text-180 + BFCL-hard20) on this exact runtime:
+
+| Lane | Score |
+|---|---|
+| GSM8K | 79/80 (98.75%) |
+| HumanEval | 39/40 (97.5%) — Docker-sandbox graded, 0 grader errors |
+| IFEval | 31/40 (77.5%) |
+| hard_reasoning | 19/20 (95.0%, independent manual review bound to content hashes) |
+| **text-180** | **168/180 (93.33%)** |
+| BFCL v4 multi_turn_base hard-20 | 6/20 (30.0%) — zero infra errors; all 14 failures are genuine model errors (state mismatches / missing exec results), not decode/harness failures |
+| **Full 200** | **174/200 (87.0%)** |
+
+All 180 text rows `finish_reason=stop`, zero transport errors, workers=1/threads=1
+per concurrency discipline. Evidence:
+[`evidence/glm53-exl3-q200v2-20260927/`](evidence/glm53-exl3-q200v2-20260927/).
+For calibration, the vLLM EXL3 profile (different engine, 32K) scored 170/180
+text and 10/20 BFCL on 2026-09-21 — text comparable, BFCL multi-turn weaker
+here.
+
 ## Layout
 
 - `docker/` — native ARM64 CUDA 13 image (ExLlamaV3 v1.5.2, TabbyAPI, torch 2.13.0+cu130)
