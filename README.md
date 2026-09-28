@@ -152,7 +152,8 @@ here.
 - `runtime.lock.json` — exact upstream pins
 - `tests/` — 76 offline tests
 - `evidence/` — sanitized public evidence bundles
-- `docs/QUALIFICATION.md` — full measured record with limits
+- `docs/RESULTS.md` — full measured record with limits
+- `docs/QUALIFICATION.md` — qualification narrative with limits
 
 ## License
 
